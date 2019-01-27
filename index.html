@@ -57826,7 +57826,8 @@ function moveSprites() {
 				var itmIndex = getItemIndex( spr.room, spr.x, spr.y );
 				if (end) { //if the sprite hits an ending
 					if (id === playerId) { // only the player can end the game
-						window.open(ending[end.id] + ".html", "_self");
+						var bitsy_window = window.open(ending[end.id] + ".html", "_self");
+                        return false;
 					}
 				}
 				else if (ext) { //if the sprite hits an exit
@@ -58128,7 +58129,8 @@ function movePlayer(direction) {
 	}
 
 	if (end) {
-		window.open(ending[end.id] + ".html", "_self");
+		var bitsy_window = window.open(ending[end.id] + ".html", "_self");\
+        return false;
 	}
 	else if (ext) {
 		player().room = ext.dest.room;

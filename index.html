@@ -1487,7 +1487,7 @@ TIL lenom
 11111111
 11111111
 00000000
-WAL true
+WAL false
 
 TIL lenon
 00000100
@@ -57827,7 +57827,7 @@ function moveSprites() {
 				if (end) { //if the sprite hits an ending
 					if (id === playerId) { // only the player can end the game
                         if (window.location !== ending[end.id] + ".html"){
-                            window.location.href = ending[end.id] + ".html";
+                            window.location.href = "/" + ending[end.id] + ".html";
                         }
 					}
 				}
@@ -58131,7 +58131,7 @@ function movePlayer(direction) {
 
 	if (end) {
         if (window.location !== ending[end.id] + ".html"){
-            window.location.href = ending[end.id] + ".html";
+            window.location.href = "/" + ending[end.id] + ".html";
         }
 	}
 	else if (ext) {

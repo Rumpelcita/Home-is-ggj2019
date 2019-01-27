@@ -4749,7 +4749,9 @@ function updateInput() {
 		}
 	}
 	else if ( isEnding ) {
-		window.location.href = "index_b.html";
+		if (window.location!=="index_b.html"){
+			window.location.href = "index_b.html";
+		}
 	}
 	else {
 		/* WALK */

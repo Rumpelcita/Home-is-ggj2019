@@ -57825,8 +57825,9 @@ function moveSprites() {
 				var itmIndex = getItemIndex( spr.room, spr.x, spr.y );
 				if (end) { //if the sprite hits an ending
 					if (id === playerId) { // only the player can end the game
-						window.location.href = ending[end.id] + ".html";
-                        return false;
+                        if (window.location !== ending[end.id] + ".html"){
+                            window.location.href = ending[end.id] + ".html";
+                        }
 					}
 				}
 				else if (ext) { //if the sprite hits an exit
@@ -58128,7 +58129,9 @@ function movePlayer(direction) {
 	}
 
 	if (end) {
-		window.location.href = ending[end.id] + ".html";
+        if (window.location !== ending[end.id] + ".html"){
+            window.location.href = ending[end.id] + ".html";
+        }
 	}
 	else if (ext) {
 		player().room = ext.dest.room;

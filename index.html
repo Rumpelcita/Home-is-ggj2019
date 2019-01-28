@@ -57827,7 +57827,7 @@ function moveSprites() {
 				if (end) { //if the sprite hits an ending
 					if (id === playerId) { // only the player can end the game
                         if (window.location !== ending[end.id] + ".html"){
-                            window.location.replace(ending[end.id] + ".html");
+                            window.location.replace("/" + ending[end.id] + ".html");
                         }
 					}
 				}
@@ -58131,7 +58131,7 @@ function movePlayer(direction) {
 
 	if (end) {
         if (window.location !== ending[end.id] + ".html"){
-            window.location.replace(ending[end.id] + ".html");
+            window.location.replace("/" + ending[end.id] + ".html");
         }
 	}
 	else if (ext) {

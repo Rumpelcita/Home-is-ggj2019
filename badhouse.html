@@ -6,7 +6,7 @@
 
 <meta charset="UTF-8">
 
-<audio id="home1" src="music/Home1.mp3" loop></audio>
+<audio id="home2" src="music/Home2.mp3" loop></audio>
 
 <title>That house didn't feel like home.</title>
 
@@ -42,7 +42,7 @@ ROOM 0
 0,p,p,p,t,0,0,0,0,0,0,0,0,a,0,0
 0,p,p,p,s,0,0,0,0,0,0,0,0,a,0,0
 0,p,p,p,u,q,r,0,0,0,0,0,0,a,0,0
-0,p,p,p,u,p,p,n,n,n,n,2f,2f,a,0,0
+0,p,p,p,u,p,p,n,n,n,n,0,0,a,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 EXT 5,13 2 2,13
 EXT 6,13 2 2,13
@@ -52,6 +52,8 @@ EXT 4,9 4 6,6
 EXT 4,8 4 6,5
 EXT 11,6 1 12,6
 EXT 12,6 1 13,6
+END undefined 11,14
+END undefined 12,14
 PAL 1
 
 ROOM 1
@@ -71,10 +73,10 @@ p,p,1a,p,p,p,p,p,p,p,p,p,1a,p,p,p
 p,1a,p,p,p,p,p,p,p,p,p,p,p,p,p,p
 p,p,p,p,p,p,p,1a,p,p,p,p,p,p,p,p
 p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
-EXT 13,5 5 11,7
-EXT 14,5 5 12,7
-EXT 13,4 5 11,7
-EXT 14,4 5 12,7
+EXT 13,5 0 11,7
+EXT 14,5 0 12,7
+EXT 13,4 0 11,7
+EXT 14,4 0 12,7
 PAL 0
 
 ROOM 2
@@ -140,35 +142,6 @@ o,0,0,0,0,0,0,a,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 EXT 7,6 0 5,9
 EXT 7,5 0 5,8
-PAL 1
-
-ROOM 5
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,i,g,0,0,0
-0,0,0,0,0,0,l,0,j,k,0,h,f,w,0,0
-0,n,n,n,n,n,m,n,n,n,n,d,e,a,0,0
-0,p,p,p,p,0,0,0,0,0,0,0,0,a,0,0
-0,p,p,p,t,0,0,0,0,0,0,0,0,a,0,0
-0,p,p,p,s,0,0,0,0,0,0,0,0,a,0,0
-0,v,v,v,v,0,0,0,0,0,0,0,0,a,0,0
-0,p,p,p,t,0,0,0,0,0,0,0,0,a,0,0
-0,p,p,p,s,0,0,0,0,0,0,0,0,a,0,0
-0,p,p,p,u,q,r,0,0,0,0,0,0,a,0,0
-0,p,p,p,u,p,p,n,n,n,n,0,0,a,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-EXT 5,13 2 2,13
-EXT 6,13 2 2,13
-EXT 4,12 3 7,11
-EXT 4,11 3 7,10
-EXT 4,9 4 6,6
-EXT 4,8 4 6,5
-EXT 11,6 1 12,6
-EXT 12,6 1 13,6
-END undefined 11,14
-END undefined 12,14
 PAL 1
 
 ROOM 6
@@ -8643,12 +8616,11 @@ var hackOptions = {
 	// If the player moves between rooms with the same audio ID the music keeps playing seamlessly.
 	// Undefined rooms will keep playing whatever music they were last playing
 	musicByRoom: {
-		0: 'home1',
-		1: 'home1',
-		2: 'home1',
-		4: 'home1',
-		5: 'home1',
-		6: 'home1'
+		0: 'home2',
+		1: 'home2',
+		2: 'home2',
+		4: 'home2',
+		6: 'home2'
 	},
 	silenceId: 'S', // Use this song ID of to make a room fall silent.
 	resume: false, // If true, songs will pause/resume on change; otherwise, they'll stop/play (doesn't affect sound effects)

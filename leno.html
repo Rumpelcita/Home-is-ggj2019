@@ -4997,9 +4997,10 @@ function updateInput() {
 		}
 	}
 	else if ( isEnding ) {
-		if (window.location!=="index_b.html"){
-            window.location.href = "index_b.html";
-        }
+		if (!redirectBitsy){
+			redirectBitsy = true;
+			window.location.href = "index_b.html";
+		}
 	}
 	else {
 		/* WALK */
@@ -6421,6 +6422,7 @@ function getRoomPal(roomId) {
 var isDialogMode = false;
 var isNarrating = false;
 var isEnding = false;
+var redirectBitsy = false;
 var dialogModule = new Dialog();
 var dialogRenderer = dialogModule.CreateRenderer();
 var dialogBuffer = dialogModule.CreateBuffer();
